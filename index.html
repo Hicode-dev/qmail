@@ -1,0 +1,2474 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../icofont/icofont.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./mediaquery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <main>
+    <div class="co ">
+      <nav class="row py-4">
+        <div class="wrap col-sm-2">
+          <div class="image-logo  d-flex  gap-4 align-items-center">
+            <div class="offcanvas offcanvas-start w-50  off" id="demo">
+              <div class="offcanvas-header">
+                <h1 class="offcanvas-title"></h1>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="container-fluid h-100">
+                  <button type="button" class="btn  mt-3 bg-danger  d-flex rounded-pill align-items-center gap-2"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                  <h5 class="bg-danger"> compose</h5>
+                  <i class="icofont-plus " style="background-color:transparent;"></i>
+                </button>
+                    <div class="all-left-button">
+                      <button class="left-but1 btn btn-secondary gap-5  mt-3 rounded w-100" id="inbox" onclick="inbox()"><i class="icofont-inbox"></i> inbox</button>
+                      <button class="left-but2 btn btn-secondary gap-5  mt-3 rounded w-100" id="stared" onclick="started()"> <i class="icofont-star"></i> Stared</button>
+                      <button class="left-but2 btn btn-secondary gap-5  mt-3 rounded w-100" id="snoozed" onclick="snoozed()">  <i class="icofont-clock-time"></i>snoozed</button>
+                      <button class="left-but2 btn btn-secondary  mt-3 rounded w-100" id="sentt" onclick="sent()"><i class="icofont-bubble-right"></i> sent</button>
+                      <button class="left-but2 btn btn-secondary  mt-3 rounded w-100" id="draft" onclick="draft()"> Draft</button>
+      
+                    </div>
+                </div>
+
+              </div>
+            </div>
+
+           
+            <button class="btn  off" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+              <i class="icofont-settings"></i>
+
+            </button>
+
+            <img src="https://questgig.com/questgig.png" alt="">
+            <h3>Qmail</h3>
+          </div>
+        </div>
+        <div class="wrapp col-sm-7 ps-5 ">
+          <div class="search ">
+            <i class="icofont-search"></i>
+            <input type="text">
+            <i class="icofont-settings"></i>
+          </div>
+        </div>
+        <div class="wrppp col-sm-3 ">
+          <div class="right-hand-nav   d-flex align-items-center gap-4  pe-3" style="justify-content: end; ">
+            <div class="setting">
+              <i class="icofont-gears"></i>
+            </div>
+            <div class="gift ">
+              <i class="icofont-gift"></i>
+            </div>
+            <div class="image-nav">
+              <img src="./Screenshot_20220618-123822_1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="ishugy h-100  ">
+        <div class="all-boxes row w-100 ">
+          <div class="left-box col-sm-2 ">
+            <div class="container-fluid boxxx ">
+              <button type="button" class="btn  mt-3 bg-danger  d-flex rounded-pill align-items-center gap-2"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                <h5 class="bg-danger"> compose</h5>
+                <i class="icofont-plus " style="background-color:transparent;"></i>
+              </button>
+              <div class="all-left-button">
+                <button class="left-but1 btn btn-secondary gap-5  mt-3 rounded w-100" id="inbox" onclick="inbox()"><i class="icofont-inbox"></i> inbox</button>
+                <button class="left-but2 btn btn-secondary gap-5  mt-3 rounded w-100" id="stared"  onclick="started()"><i class="icofont-star"></i> Stared</button>
+                <button class="left-but2 btn btn-secondary gap-5  mt-3 rounded w-100" id="snoozed" onclick="snoozed()">  <i class="icofont-clock-time"></i>snoozed</button>
+                <button class="left-but2 btn btn-secondary  mt-3 rounded w-100" id="sentt" onclick="sent()"><i class="icofont-bubble-right"></i> sent</button>
+                <button class="left-but2 btn btn-secondary  mt-3 rounded w-100" id="draft" onclick="draft()"> Draft</button>
+
+              </div>
+            </div>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">Recipient:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="recipient-name" class="col-form-label">subject:</label>
+                        <input type="text" class="form-control" id="recipient-name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text" rows="5"></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="middle-box col-sm-10  " id="middlebox1">
+            <div class="thick-box border-bottom  ">
+              <div class="middle-check row border-bottomdata-bs-toggle=" offcanvas" data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6 class="text-danger">Aliexpress,Draft,2</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6> new developer -web developer  LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          <div class="middle-box col-sm-10  " id="middlebox2">
+            <div class="thick-box border-bottom ">
+              <div class="middle-check row border-bottomdata-bs-toggle=" offcanvas" data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TechGig Latest news</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>wipro America Express persistent Goldman sachs and</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>linkdein job Alert</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TechGig Latest news</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TechGig Latest news</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>questgig hiring team</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TechGig Latest news</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TechGig Latest news</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+          <div class="middle-box col-sm-10  " id="middlebox3">
+          </div>
+          <div class="middle-box col-sm-10  " id="middlebox4">
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6>TO no reply</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>thanks for applying to questgig  - thank you so much ild be expecting</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="middle-box col-sm-10  " id="middlebox5">
+            <div class="thick-box  border-bottom">
+              <div class="middle-check row border-bottomdata-bs-toggle=" offcanvas" data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6 class="text-danger">Aliexpress,Draft,2</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, ex?</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6 class="text-danger">Aliexpress,Draft,2</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6 class="text-danger">Aliexpress,Draft,2</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6 class="text-danger">Aliexpress,Draft,2</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6 class="text-danger">Aliexpress,Draft,2</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="thick-box ">
+              <div class="middle-check row border-bottom" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                <div class="col-sm-3 link ">
+                  <div class="straight d-flex align-items-center gap-3">
+                    <input type="checkbox" name="" id="">
+                    <i class="icofont-star"></i>
+                    <h6 class="text-danger">Aliexpress,Draft,2</h6>
+                  </div>
+                </div>
+                <div class="col-sm-7">
+                  <div class="words d-flex">
+                    <h6>l5 new developer -web developer - LAc Fedral and roles are available</h6>
+                  </div>
+                </div>
+                <div class="col-sm-2 time">
+                  <h6>15:60</h6>
+                </div>
+              </div>
+
+
+              <div class="offcanvas offcanvas-end w-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+
+                  </h5>
+                  <button type="button" class="btn-close bg-light text-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div class="icons ">
+                    <div class="bin gap-4 d-flex justify-content-center">
+                      <i class="icofont-bin"></i>
+                      <i class="icofont-envelope"></i>
+                      <i class="icofont-bug"></i>
+                      <i class="icofont-download"></i>
+                    </div>
+                  </div>
+                  <p class="mt-3 gb">Top skills for engineers to master during recession | Must know programming
+                    mistakes
+                    that every coder should know</p>
+
+                  <div class="gc">
+
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi cum id enim distinctio, aliquam
+                    quidem, facilis eum sequi ipsam ad quasi beatae reprehenderit, voluptas dolore praesentium quo sint
+                    eligendi veniam veritatis placeat quisquam et error nesciunt. Ipsum totam repellendus, fugiat
+                    veritatis laudantium quidem dolores aut ab laboriosam culpa, at aliquid!
+                    <img src="./we are hiring.jpg" alt="">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./index.js" defer></script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

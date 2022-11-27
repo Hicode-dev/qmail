@@ -1,0 +1,137 @@
+@media screen and (max-width:1053px) {
+
+.search input{
+    outline: none;
+    border: none;
+    width: 25rem;
+    /* padding:1 0.6rem; */
+
+}
+.off i{
+    display: none ;
+}
+.search input i{
+    display: none;
+  }
+  /* .boxxx{
+    display: none !important;
+} */
+}  
+
+@media screen and (max-width:897px) {
+.image-logo h3{
+    display: none;
+}
+.boxxx{
+    display: none !important;
+} 
+.off i{
+    display:block;
+}
+}
+@media screen and (max-width:878px) {
+.wrppp{
+    display: none;
+}
+}
+.search input{
+    outline: none;
+    border: none;
+    width: 20rem;
+    padding:1 0.6rem;
+
+}
+.search input i{
+  display: none;
+}
+.off{
+    display: block !important;
+}
+.off i{
+    font-size: 1.7rem;
+}
+.left-boxes{
+    display: none !important;
+}
+
+@media screen and (max-width:288px) {
+    .image-logo h3{
+        display: block;
+    }
+    .wrppp{
+        display: none;
+    }
+    .search input{
+        outline: none;
+        border: none;
+        width: 10rem;
+        padding:1 0.6rem;
+    
+    }
+    .off{
+        display: block !important;
+    }
+    .left-boxes{
+        display: none !important;
+    }
+    }  
+    
+  @media screen and (max-width:588px) {
+    .image-logo h3{
+        display: block;
+    }
+    .wrppp{
+        display: none;
+    }
+    .search input{
+        outline: none;
+        border: none;
+        width: 10rem;
+        padding:1 0.6rem;
+    
+    
+    }
+    .off{
+        display: block !important;
+    }
+    .left-boxes{
+        display: none !important;
+    }
+    }  
+    
+  @media screen and (max-width:735px) {
+    .wrppp{
+        display: none;
+    }
+    .left-boxes{
+        display: none !important;
+    }
+    .search {
+        margin-top:2rem ;
+    }
+    .search input{
+        outline: none;
+        border: none;
+        width: 16rem;
+        padding:1 0.6rem;
+    
+    
+    }
+    .off{
+        display: block !important;
+    }
+    .left-boxes{
+        display: none !important;
+    }
+    .time{
+        display: none;
+    }
+    .link{
+        display: none;
+    }
+  .middle-check h6{
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    }  
+    
